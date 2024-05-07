@@ -1,0 +1,534 @@
+/* --- GENERAL --- */
+h1{
+  align-self: center;
+}
+
+/* --- NAVIGATION --- */
+.header
+{
+  width: 100vw;
+  height: 55vh;
+  margin: -10px;
+  position: relative;
+  background-color: green;
+}
+#headerImg
+{
+  position: absolute;
+  width: 100vw;
+  height: 55vh;
+  object-fit: cover;
+  object-position: 50% 17%;
+}
+#logoImg
+{
+  position: absolute;
+  top: 10vh;
+  margin-left: 4vw;
+  width: 35vw;
+}
+
+.navbar
+{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #100F0F;
+  color: white;
+}
+.navbar nav ul
+{
+  display:flex;
+  align-items: center;
+  list-style: none;
+}
+.navbar nav ul li a
+{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.navbar nav ul li a:hover
+{
+  font-size: 20px;
+  color: white;
+}
+nav ul li a:active
+{
+  font-size: 20px;
+  text-decoration: underline;
+}
+.navbar-link
+{
+  text-decoration: none;
+  display: flex;
+  padding: 10px;
+}
+/* --- LOGIN/SIGNUP --- */
+#accountLinks
+{
+  position: absolute;
+  top: 10;
+  right: 0;
+  margin-right: 4px;
+}
+#accountLinks li{
+  margin-right: 10px;
+}
+nav ul #accountLinks 
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- INTERNAL NAV HISTORY */
+#historyNav
+{
+  align-self: baseline;
+  margin-top: 3vh;
+}
+#historyNav nav ul
+{
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  list-style: none;
+}
+#historyNav nav ul li a
+{
+  color: white;
+  text-decoration: none;
+}
+#historyNav nav ul li:hover
+{
+  font-weight: bold;
+}
+#lastElement
+{
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* --- HOME --- */
+#homeInfo
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
+}
+#summary
+{
+  width: 60vw;
+  align-self: flex-start;
+  margin-left: 5vw;
+}
+#summaryCard
+{
+  margin-top: 5vh;
+  border: 2pt solid black;
+  background-color: black;
+  color: black;
+  width: 25vw;
+  height: fit-content
+}
+#summaryCard img
+{
+  max-width: 25vw;
+}
+/* --- SEASONS ---*/
+.seasonLinkBox
+{
+  margin-top: 20px;
+  background-color: black;
+  max-width: 250px;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  font-size: 18px;
+  padding: none;
+  font-weight: bold;
+  box-shadow: 5px 5px 3px black;
+}
+
+.seasonLinkBox img
+{
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.seasonLinkBox:hover
+{
+  cursor: pointer;
+  box-shadow: 8px 8px 4px black;
+  transform: scale(1.03);
+
+}
+/* --- EPISODES --- */
+#EpisodeGrid
+{
+  display: flex;
+  justify-content: center;
+}
+#SummaryEpisodeCards
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  grid-auto-rows: minmax(400px, auto);
+  margin-top: 2vh;
+  width: 100%
+}
+@media only screen and (max-width: 800px)
+{
+    #SummaryEpisodeCards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
+#episodeId
+{
+  margin-left: 10px;
+  padding: 0 8px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+#ratingTitleBlock
+{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+#ratingTitleBlock #rating
+{
+  margin-left: 225px;
+}
+#Title
+{
+  margin: 0 10px;
+  padding: 0 8px;
+  text-align: left;
+  font-weight: bold;
+}
+#Synopsis
+{
+  margin: 0 10px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 8px;
+  font-size: 14px;
+}
+#Date
+{
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+  padding-top: 0 8px;
+  margin: 0 10px;
+  color:#C3C3C3;
+}
+#individualEpisode
+{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 450px;
+  background-color: black;
+  margin: 8px 5px;
+}
+#individualEpisode:hover{
+  cursor: pointer;
+  box-shadow: 8px 8px 4px #1A1A1A;
+  transform: scale(1.03);
+}
+
+#individualEpisode img
+{
+  width: 450px;
+  height: 253px;
+}
+/* --- EPISODE DETAILS --- */
+#ratings{
+  display: flex;
+  color: #fe29b7;
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 20px;
+}
+#overallRating, #userRating{
+  padding: 10px;
+}
+.ratingLabel{
+  color: white;
+}
+
+#EpisodeDetails
+{
+  margin: 1vh 30vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+  border: 3px solid black;
+  background-color: black;
+  color: white;
+}
+#EpisodeDetails img
+{
+  max-width: 40vw; 
+}
+#EpisodeDetails ul
+{
+  margin-top: -1px;
+}
+#EpisodeDetails span
+{
+  margin: 3px 15px;
+}
+#title
+{
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+#airDate
+{
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+#synopsis
+{
+  font-size: 16px;
+  text-align: left;
+}
+
+/* --- CONTESTANTS --- */
+#ContestantGrid
+{
+  display: flex;
+  justify-content: center;
+}
+#SummaryContestantCards
+{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(210px, auto);
+  margin-top: 2vh;
+  width: 95vw;
+}
+@media only screen and (min-width: 201px) and (max-width: 600px)
+{
+    #SummaryContestantCards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px)
+{
+    #SummaryContestantCards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (min-width: 801px) and (max-width: 1000px)
+{
+    #SummaryContestantCards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+#individualContestant
+{
+  margin-top: 2vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: #F7F7F7;
+  
+}
+#individualContestant img
+{
+  width: 200px;
+  height: 200px;
+}
+
+#contestantCardName
+{
+  font-size: 16px;
+  font-weight: bold;
+}
+#individualContestant:hover
+{
+  cursor: pointer;
+  box-shadow: 5px 5px 3px #1A1A1A;
+  transform: scale(1.03);
+}
+
+/* ---CONTESTANT DETAILS */
+#ContestantDetails
+{
+  margin: 1vh 25vw;
+  display: flex;
+  max-width: 45vw;
+}
+#ContestantDetails img
+{
+  max-width: 25vw;
+  border: 1px solid black;
+}
+#ContestantInfo
+{
+  background-color: black;
+  width: 20vw;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+#contestantName
+{
+  margin-top: 2vh;
+  margin-left: 1vw;
+  align-self: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+#trackRecordLabel
+{
+  align-self: left;
+  margin-left: 1vw;
+  margin-top: 1.5vh;
+  font-weight: bold;
+  font-size: 18px;
+}
+#trackRecordData
+{
+  margin-left: 2vw;
+}
+.trackLabel
+{
+  font-weight: bold;
+}
+form
+{
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  background-color: #F7F7F7;
+  color: black;
+  font-size: 16px;
+  border: 3px solid #203433;
+  border-radius: 6px;
+}
+.signUp
+{
+  width: 325px;
+  height: 460px;
+}
+#userForm h2
+{
+  color: #203433
+}
+#loginForm, #signupForm
+{
+  padding: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border-radius: 6px;
+}
+#formInput
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1em;
+  width: 225px;
+  padding-bottom: 20px;
+}
+#loginForm label, #signupForm label
+{
+  text-align: left;
+  align-self: center;
+  justify-self: center;
+}
+#loginForm input, #signupForm input
+{
+  padding: 5px;
+  border: 1px solid #203433;
+  border-radius: 3px;
+  width: 100%;
+}
+#formSubmit
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#formSubmit button
+{
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px;
+  margin-left: 30px;
+  align-self: center;
+  background-color: #203433;
+  color: white;
+  font-weight: bold;
+}
+.account{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px black;
+  background-color: #1A1A1A;
+  padding: 2em;
+  margin-top: 1em;
+  max-width: 70vw;
+}
+
+.userInfo{
+  text-align: center;
+  background-color: #203433;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px 5px;
+  margin-bottom: 2em;
+}
+#accountRatings
+{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 2vw;
+  justify-items: end;
+  padding: 0 2em;
+}
+.ratings{
+  background-color: #203433;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px 5px;
+  padding: 2em;
+}
+.ratings h3{
+  text-align: center;
+  font-size: 20px;
+}
+#episodeRatings li{
+  margin-left: -2vw;
+}
+#contestantRatings li{
+  margin-left: -2vw;
+  padding-right: 2vw;
+}
