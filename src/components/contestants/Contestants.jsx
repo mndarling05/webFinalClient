@@ -49,7 +49,7 @@ const Contestants = () => {
     }, [dispatch, user])
 
     const getContestant = e => {
-        let importurl = import.meta.env.VITE_CONTESTANTS_API
+        let importurl = import.meta.env.VITE_CONTESTANTS_API + id
         fetch(importurl)
         .then(response => response.json())
         .then(response => {
