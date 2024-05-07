@@ -49,8 +49,7 @@ const Contestants = () => {
     }, [dispatch, user])
 
     const getContestant = e => {
-        let importurl = import.meta.env.VITE_APP_API
-        importurl += ('/api/contestants/' + id)
+        let importurl = import.meta.env.VITE_CONTESTANTS_API
         fetch(importurl)
         .then(response => response.json())
         .then(response => {
