@@ -9,7 +9,7 @@ const EpisodeRatingItem = ({rating}) => {
 
     useEffect(() => {
         const getEpisode = async () => {
-            const response = await fetch(import.meta.env.VITE_APP_API + '/api/episodes/' + rating.episode_id)
+            const response = await fetch(import.meta.env.VITE_EPISODES_API + rating.episode_id)
 
             const json = await response.json()
 

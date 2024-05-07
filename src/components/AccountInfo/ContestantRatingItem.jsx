@@ -9,7 +9,8 @@ const ContestantRatingItem = ({rating}) => {
 
     useEffect(() => {
         const getContestant = async () => {
-            const response = await fetch(import.meta.env.VITE_APP_API + '/api/contestants/' + rating.contestant_id)
+            console.log("get Contestant")
+            const response = await fetch(import.meta.env.VITE_CONTESTANTS_API + rating.contestant_id)
 
             const json = await response.json()
             if(response.ok && json.length > 0){
