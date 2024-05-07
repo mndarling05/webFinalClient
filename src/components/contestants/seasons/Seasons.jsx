@@ -13,7 +13,6 @@ const Seasons = () => {
     const getContestants = () => {
 
         let importurl = import.meta.env.VITE_APP_API;
-        importurl += ('/api/contestants')
         fetch(importurl)
         .then(response => response.json())
         .then(response => {
